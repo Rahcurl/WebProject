@@ -1,8 +1,7 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-
+import MyComponent from './comp1'
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-  Hello react and vite!
-  </StrictMode>,
+  <div>
+    <MyComponent/>
+  </div>
 )
