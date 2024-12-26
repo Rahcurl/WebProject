@@ -14,6 +14,7 @@ export class Xyz extends React.Component {
   }
 }
 
+
 // Class-based component Abc
 class Abc extends React.Component {
   render() {
