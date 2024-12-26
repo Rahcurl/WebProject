@@ -30,6 +30,18 @@ class Objiterexp extends React.Component {
             }));
         }, 10000); 
     }
+    render() {
+        return (
+            <ul>
+                {Object.keys(this.state).map((key) => (
+                    <li key={key}>
+                        {key}: {this.state[key]}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+    
    
 }
 export default Objiterexp;
