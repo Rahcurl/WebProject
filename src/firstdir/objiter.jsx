@@ -33,14 +33,17 @@ class Objiterexp extends React.Component {
     render() {
         return (
             <ul>
-                {Object.keys(this.state).map((key) => (
-                    <li key={key}>
-                        {key}: {this.state[key]}
-                    </li>
-                ))}
+                {Object.keys(this.state)
+                    .filter((key) => key !== "donemsg") // Corrected operator
+                    .map((key) => (
+                        <li key={key}>
+                            {key}: {this.state[key]}
+                        </li>
+                    ))}
             </ul>
         );
     }
+    
     
    
 }
