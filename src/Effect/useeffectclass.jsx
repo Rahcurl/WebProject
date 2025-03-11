@@ -16,7 +16,7 @@ function ApiSimulation(){
             setUser(user.name);
             setId(user.id);
         });
-    }
+    },[user,id]
     );
     return (
         <div>
@@ -34,3 +34,5 @@ export default ApiSimulation;
 //create a component which will return 
 //unordered list passed fetch data()
 //resolve promise with list/array of strings
+
+//if we use promise , wen cannot cancelled out(only possible using bluebird)

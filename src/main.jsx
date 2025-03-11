@@ -1,15 +1,11 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-//import PropExmp from "./props/propscomp3";  // Importing the PropExmp component
-// import DefaultProps1 from "./props/defaultprops";
-//import StateExmpl from "./firstdir/stateexmp";
-//import ApiSimulation from "./Effect/useeffectclass";
-import Carousel from "./components/Carousel";
-//import CountdownTimer from "./components/CountdownTimer";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css"; // Assuming you have this for styling
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <Carousel/>
-    
-  </StrictMode>
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
