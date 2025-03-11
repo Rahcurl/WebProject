@@ -1,5 +1,4 @@
 import * as React from "react";
-import "./monolithiccomp.css"; // Import CSS for styling
 
 const id = (function* () {
   let i = 1;
@@ -76,9 +75,10 @@ class MyMonoLithicComp extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div>
         <h2>Article Manager</h2>
-        <div className="input-section">
+
+        <div>
           <input
             type="text"
             placeholder="Title"
@@ -94,24 +94,21 @@ class MyMonoLithicComp extends React.Component {
           <button onClick={this.onClickAdd}>Add</button>
         </div>
 
-        <ul className="article-list">
+        <ul>
           {this.state.articles.map((article) => (
-            <li key={article.id} className="article-item">
-              <div className="article-header">
+            <li key={article.id}>
+              <div>
                 <span
-                  className="summary-name"
                   onClick={() => this.toggleSummary(article.id)}
+                  style={{ cursor: "pointer" }}
                 >
                   {article.title}
                 </span>
-                <button
-                  className="remove-btn"
-                  onClick={() => this.removeSummary(article.id)}
-                >
+                <button onClick={() => this.removeSummary(article.id)}>
                   Remove
                 </button>
               </div>
-              {article.show && <p className="summary">{article.summary}</p>}
+              {article.show && <p>{article.summary}</p>}
             </li>
           ))}
         </ul>

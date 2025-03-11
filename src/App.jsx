@@ -1,11 +1,10 @@
 import React from "react";
-import MyMonoLithicComp from "./add_remove/monolithiccomp";
+import FileUpload from "./add_remove/fileupload";
 
 function App() {
   return (
     <div className="App">
-      <h1>Article Manager</h1>
-      <MyMonoLithicComp />
+      <FileUpload />
     </div>
   );
 }
